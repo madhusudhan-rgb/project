@@ -208,7 +208,7 @@ settings = {
 # ============================================================
 # AI CHATBOT  (Hugging Face Inference Providers)
 # ============================================================
-_HF_API_KEY   = "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"
+_HF_API_KEY   = "hf-YOURAPI(i removed mine cuz lol it was a free model and i dont wnna use all mines up)"
 _HF_MODEL     = "openai/gpt-oss-120b"
 
 if HAS_HF:
@@ -1011,9 +1011,9 @@ class Toast:
         root.after(duration, destroy)
 
 
-# ============================================================
+
 # LOGIN / SIGN-UP WINDOW
-# ============================================================
+
 class AuthWindow:
     def __init__(self, on_success):
         self.on_success = on_success
@@ -1180,9 +1180,9 @@ class AuthWindow:
         self.root.mainloop()
 
 
-# ============================================================
+
 # MAIN APP
-# ============================================================
+
 class MultiPurposeApp:
     def __init__(self, root):
         self.root = root
@@ -1284,9 +1284,8 @@ class MultiPurposeApp:
         self.build_window()
         self.tick_player()
 
-    # ----------------------------------------------------------------
+  
     # TOP-LEVEL REBUILD
-    # ----------------------------------------------------------------
     def build_window(self):
         for widget in self.root.winfo_children():
             widget.destroy()
@@ -1321,9 +1320,6 @@ class MultiPurposeApp:
         self.build_pages()
         self.show_page(self.current_page)
 
-    # ----------------------------------------------------------------
-    # SIDEBAR NAVIGATION
-    # ----------------------------------------------------------------
     def _build_sidebar(self, parent):
         sidebar = tk.Frame(parent, bg=color("panel"), width=200)
         sidebar.pack(side="left", fill="y")
@@ -1436,9 +1432,7 @@ class MultiPurposeApp:
         self.root.destroy()
         AuthWindow(on_success=_start_main_app).run()
 
-    # ----------------------------------------------------------------
-    # PAGE MANAGEMENT
-    # ----------------------------------------------------------------
+  
     def build_pages(self):
         self.pages = {}
         page_names = (
